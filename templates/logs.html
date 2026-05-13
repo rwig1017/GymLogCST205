@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workout Logs</title>
+    
+    <!-- Link to CSS styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Workout History</h1>
+
+    <!-- Loop through all saved workout logs -->
+    {% for i, log in logs %}
+        <div class="log-box">
+            <h2>{{ log.workout }}</h2>
+            <p>{{ log.notes }}</p>
+            <p><strong>Date:</strong> {{ log.date }}</p>
+            
+            <!-- Show uploaded image OR default image -->
+            {% if log.image %}
+                <img src="{{ url_for('static', filename='uploads/' + log.image) }}">
+            {% else %}
+                <img src="{{ url_for('static', filename='default.jpg') }}">
+            {% endif %}
+
+            <br><br>
+            
+            <!-- Delete this workout -->
+            <a href="/delete/{{ i }}" style="color:red;">Delete</a>
+        </div>
+    {% endfor %}
+
+    <a href="/" class="back-btn">Back Home</a>
+
+</body>
+</html>

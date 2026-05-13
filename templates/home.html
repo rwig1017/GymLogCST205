@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GymLog</title>
+
+    <!--Link to external CSS file -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+        <!-- App title / header -->
+
+    <h1>GymLog</h1>
+
+    <!-- Motivational quote from API -->
+    <p class="quote">{{ quote }}</p>
+
+    <!-- Main navigation buttons -->
+    <div class="container">
+        <a href="/add">➕ Add Workout</a>
+        <a href="/logs">🏋️ View Logs</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Workout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Add Workout</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <!-- Workout name input -->
+        <input type="text" name="workout" placeholder="Workout" required><br><br>
+
+        <!-- Notes input -->
+        <textarea name="notes" placeholder="Notes" required></textarea><br><br>
+        
+        <!-- Image upload -->
+        <input type="file" name="photo"><br><br>
+        
+        <!-- Submit button -->
+        <button type="submit">Save</button>
+    </form>
+    
+    <!-- Back to home page -->
+    <a href="/" class="back-btn">Back Home</a>
+
+</body>
+</html>
