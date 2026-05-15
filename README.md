@@ -26,6 +26,10 @@ May 6, 2026
 
 https://github.com/rwig1017/GymLogCST205
 
+## Trello
+
+https://trello.com/invite/b/6a04ea7bee36f88577373bc3/ATTI6cdcd1855d44cc69dc248c2512ae2002F78125BE/cst205-project
+
 ## Future Work
 Improve UI
 Possibly add more APIs
